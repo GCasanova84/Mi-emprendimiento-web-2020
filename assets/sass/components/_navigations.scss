@@ -1,0 +1,19 @@
+.nav-link {
+  @include font($poppins, $medium, $fw-bold, $white);
+  @include breakpoint($min-desktop) {
+    font-size: $x-small;
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+a.group-item {
+  @include font($poppins, $large, $fw-regular, $white);
+  text-decoration: none;
+  @include breakpoint($min-desktop) {
+    font-size: $x-small;
+    &:hover {
+      color: $orange;
+    }
+  }
+}

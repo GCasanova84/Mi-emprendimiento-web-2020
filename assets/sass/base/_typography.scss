@@ -1,0 +1,44 @@
+h1 {
+  @include font($ubuntu, $x-large, $fw-bold, $black);
+  @include breakpoint($min-desktop) {
+    font-size: $small;
+  }
+}
+h2 {
+  @include font($ubuntu, $x-large, $fw-bold, $black);
+  @include breakpoint($min-desktop) {
+    font-size: $medium;
+  }
+}
+h3 {
+  @include font($poppins, $large, $fw-bold, $white);
+  @include breakpoint($min-desktop) {
+    font-size: $small;
+  }
+}
+h4 {
+  @include font($ubuntu, $large, $fw-bold, $black);
+  @include breakpoint($min-desktop) {
+    font-size: $small;
+  }
+}
+h5 {
+  @include font($poppins, $large, $fw-regular, $white);
+  @include breakpoint($min-desktop) {
+    font-size: $x-small;
+  }
+}
+p {
+  @include font($ubuntu, $large, $fw-regular, $black);
+  line-height: 2;
+  @include breakpoint($min-desktop) {
+    font-size: $x-small;
+  }
+}
+a.footer-list__item {
+  @include font($poppins, $large, $fw-regular, $purple);
+  text-decoration: none;
+  @include breakpoint($min-desktop) {
+    font-size: $x-small;
+  }
+}

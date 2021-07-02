@@ -1,0 +1,118 @@
+.grid-container {
+  padding: 0.5rem 0.3rem;
+  & .grid-item {
+    border: 1px solid $sable;
+    padding: 1rem;
+    margin: 0.75rem 0;
+  }
+  @include breakpoint($min-desktop) {
+    & .grid-item {
+      margin: 0;
+    }
+  }
+}
+
+.article {
+  border: 1px dotted $charcoal;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  &__image {
+    margin-bottom: 0.5rem;
+  }
+  &__body {
+    p {
+      text-align: justify;
+      margin-bottom: 0.5rem;
+    }
+  }
+  &__footer {
+    font-size: $large;
+    & .footer-icon {
+      margin-right: 0.3rem;
+    }
+  }
+  @include breakpoint($min-desktop) {
+    &__footer {
+      font-size: $x-small;
+    }
+  }
+}
+
+.section {
+  &__header {
+    margin-bottom: 0.5rem;
+    text-align: center;
+    & .header-img {
+      border-radius: 50%;
+      border: 1px solid $sable;
+      width: 16rem;
+      height: 16rem;
+      margin-bottom: 1rem;
+    }
+    & .header-icons {
+      & .icon {
+        margin: 0 0.4rem;
+        color: $black;
+        font-size: $x-large;
+      }
+    }
+  }
+  &__body {
+    text-align: justify;
+    p {
+      margin-bottom: 0.5rem;
+    }
+  }
+  &__footer {
+    & .footer-title {
+      background-color: $charcoal;
+      text-align: center;
+      h3 {
+        line-height: 1.8;
+      }
+    }
+    & .footer-list {
+      display: flex;
+      flex-direction: column;
+      &__item {
+        line-height: 1.7;
+        i {
+          -webkit-transform: scale(0.5);
+              -ms-transform: scale(0.5);
+                  transform: scale(0.5);
+        }
+      }
+    }
+  }
+  &__animation {
+    padding-top: 10rem;
+    & .animation-container {
+      display: flex;
+      justify-content: center;
+      svg {
+
+      }
+    }
+  }
+  @include breakpoint($min-desktop) {
+    &__header {
+      & .header-img {
+        width: 10rem;
+        height: 10rem;
+      }
+      & .header-icons {
+        & .icon {
+          margin: 0 0.25rem;
+          font-size: $medium;
+        }
+      }
+    }
+    &__footer {
+      & .footer-list {
+        &__item {
+          line-height: normal;
+        }
+      }
+    }
+  }
+}

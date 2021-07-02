@@ -1,0 +1,23 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: $black;
+  padding: 0.35rem 0.5rem;
+  & .navbar-brand {
+    width: 3.5rem;
+  }
+  & .navbar-collapse {
+    justify-content: flex-end;
+  }
+  & .navbar-toggler {
+    & .navbar-toggler-icon {
+      border-color: $white;
+    }
+  }
+  @include breakpoint($min-desktop) {
+    padding: 0.2rem 0.5rem;
+    & .navbar-brand {
+      width: 2rem;
+    }
+  }
+}

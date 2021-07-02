@@ -1,0 +1,9 @@
+.header {
+  @include breakpoint($min-desktop) {
+    display: flex;
+    justify-content: center;
+    &__img {
+      width: 45vw;
+    }
+  }
+}

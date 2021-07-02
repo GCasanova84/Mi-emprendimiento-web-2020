@@ -1,0 +1,13 @@
+.f-form__button {
+  @include font($poppins, $large, $fw-regular, $black);
+  background-color: $tangerine;
+  border-radius: 0.25rem;
+  width: 4rem;
+  @include breakpoint($min-desktop) {
+    font-size: $x-small;
+    width: 3rem;
+    &:hover {
+      background-color: $white;
+    }
+  }
+}

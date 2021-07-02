@@ -1,0 +1,15 @@
+.f-form__input {
+  @include font($poppins, $large, $fw-regular, $black);
+  width: 14rem;
+  padding-left: 0.35rem;
+  border-radius: 0.25rem;
+  @include breakpoint($min-desktop) {
+    font-size: $x-small;
+    width: 9rem;
+    padding-left: 0.25rem;
+    &:focus {
+      background-color: $tangerine;
+    }
+  }
+
+}
