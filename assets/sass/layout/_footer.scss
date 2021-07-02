@@ -1,4 +1,5 @@
 .footer {
+  //for screens smaller than 992px
   background-color: $black;
   text-align: center;
   padding: 3rem 4rem 2rem 4rem;
@@ -25,6 +26,7 @@
       }
     }
   }
+  //for screens from 992px and above
   @include breakpoint($min-desktop) {
     text-align: left;
     display: flex;
@@ -33,8 +35,10 @@
     padding: 1.75rem 13rem;
     &__text {
       align-self: stretch;
-      padding-top: 0.5rem;
+      padding-top: 0.6rem;
       margin-bottom: 0;
+      margin-right: 1.5rem;
+      text-align: center;
       h5 {
         line-height: normal;
       }
@@ -52,6 +56,7 @@
       & .group-item {
         margin-right: 1.5rem;
         margin-bottom: 0;
+        text-align: center;
       }
       & .f-form {
         flex-direction: row;

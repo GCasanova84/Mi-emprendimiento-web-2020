@@ -1,5 +1,6 @@
+//main layout
 .grid-container {
-  padding: 0.5rem 0.3rem;
+  padding: 0.5rem 0.5vw;
   & .grid-item {
     border: 1px solid $sable;
     padding: 1rem;
@@ -11,18 +12,24 @@
     }
   }
 }
-
+//layout of the article section
 .article {
   border: 1px dotted $charcoal;
   margin: 0.5rem 0;
   padding: 0.5rem;
   &__image {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
   &__body {
+    h2 {
+      margin-bottom: 1rem;
+    }
     p {
       text-align: justify;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    h4 {
+      margin-bottom: 1rem;
     }
   }
   &__footer {
@@ -32,12 +39,26 @@
     }
   }
   @include breakpoint($min-desktop) {
+    &__image {
+      margin-bottom: 0.75rem;
+    }
+    &__body {
+      h2 {
+        margin-bottom: auto;
+      }
+      p {
+        margin-bottom: 0.5rem;
+      }
+      h4 {
+        margin-bottom: auto;
+      }
+    }
     &__footer {
       font-size: $x-small;
     }
   }
 }
-
+//layout of the section on the right
 .section {
   &__header {
     margin-bottom: 0.5rem;
@@ -60,13 +81,14 @@
   &__body {
     text-align: justify;
     p {
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
   }
   &__footer {
     & .footer-title {
       background-color: $charcoal;
       text-align: center;
+      margin-bottom: 1rem;
       h3 {
         line-height: 1.8;
       }
@@ -85,12 +107,29 @@
     }
   }
   &__animation {
-    padding-top: 10rem;
-    & .animation-container {
-      display: flex;
-      justify-content: center;
-      svg {
-
+    padding-top: 1.5rem;
+    svg {
+      display: block;
+      margin: 0 auto;
+      width: 300px;
+      & .animation-group {
+        & .etiqueta {
+          animation-name: animate-code;
+          animation-duration: 4s;
+          animation-iteration-count: infinite;
+        }
+        & .tuerca__interna {
+          animation-name: animate-gear;
+          animation-duration: 4s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+        & .tuerca__externa {
+          animation-name: animate-gear;
+          animation-duration: 4s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
       }
     }
   }
@@ -107,12 +146,35 @@
         }
       }
     }
+    &__body {
+      p {
+        margin-bottom: 0.5rem;
+      }
+    }
     &__footer {
+      & .footer-title {
+        margin-bottom: auto;
+      }
       & .footer-list {
         &__item {
           line-height: normal;
         }
       }
     }
+    &__animation {
+      svg {
+        width: 180px;
+      }
+    }
   }
+}
+//anchor point for scrolling purpose
+a.anchor {
+    display: block;
+    position: relative;
+    top: -98px;
+    visibility: hidden;
+    @include breakpoint($min-desktop) {
+      top: -72px;
+    }
 }

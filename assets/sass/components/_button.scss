@@ -6,6 +6,7 @@
   @include breakpoint($min-desktop) {
     font-size: $x-small;
     width: 3rem;
+    //hover pseudo class
     &:hover {
       background-color: $white;
     }

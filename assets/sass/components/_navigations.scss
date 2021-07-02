@@ -2,6 +2,7 @@
   @include font($poppins, $medium, $fw-bold, $white);
   @include breakpoint($min-desktop) {
     font-size: $x-small;
+    //hover pseudo class
     &:hover {
       color: $orange;
     }
@@ -12,6 +13,7 @@ a.group-item {
   text-decoration: none;
   @include breakpoint($min-desktop) {
     font-size: $x-small;
+    //hover pseudo class
     &:hover {
       color: $orange;
     }
